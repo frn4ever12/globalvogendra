@@ -16,6 +16,11 @@ class MenuComposer
     
     public function compose(View $view)
     {
+        // Skip admin views to prevent variable conflicts
+        if (str_contains($view->getName(), 'admin')) {
+            return;
+        }
+
         if (!$this->menus) {
             try {
                 $this->menus = Menu::where('status', true)
