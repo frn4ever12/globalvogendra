@@ -21,7 +21,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer('*', MenuComposer::class);
+        // Only apply MenuComposer to frontend views
+        View::composer(['*', '!admin*'], MenuComposer::class);
         
         // Register admin component paths
         View::addNamespace('admin-components', resource_path('views/Admin/components'));
