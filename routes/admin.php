@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PageFaqController;
 use App\Http\Controllers\Admin\PageSectionController;
 use App\Http\Controllers\Admin\ProgramController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Admin\SubMenuController;
 use App\Http\Controllers\Admin\TeamController;
@@ -28,6 +29,7 @@ Route::get('about-us/edit',[AboutUsController::class,'edit'])->name('about-us.ed
 Route::put('about-us/update',[AboutUsController::class,'update'])->name('about-us.update');
 
 Route::resource('hero-banner',HeroBannerController::class);
+Route::resource('service',ServiceController::class);
 Route::resource('program',ProgramController::class);
 Route::resource('country',CountryController::class);
 Route::resource('course',CourseController::class);
@@ -59,5 +61,10 @@ Route::post('page-section/reorder', [PageSectionController::class, 'reorder'])->
 
 // AJAX routes for Hero Banners
 Route::post('hero-banner/reorder', [HeroBannerController::class, 'reorder'])->name('hero-banner.reorder');
+
+// AJAX routes for Services
+Route::post('service/reorder', [ServiceController::class, 'reorder'])->name('service.reorder');
+Route::post('service/{service}/duplicate', [ServiceController::class, 'duplicate'])->name('service.duplicate');
+Route::post('service/{service}/toggle-status', [ServiceController::class, 'toggleStatus'])->name('service.toggle-status');
 
 });

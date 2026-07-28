@@ -3,6 +3,7 @@ namespace App\View\Composers;
 
 use App\Models\AboutUs;
 use App\Models\HeroBanner;
+use App\Models\Service;
 use App\Models\Menu;
 use Illuminate\View\View;
 
@@ -11,6 +12,7 @@ class MenuComposer
     private $menus;
     private $heroBanners;
     private $aboutUs;
+    private $services;
     
     public function compose(View $view)
     {
@@ -40,9 +42,18 @@ class MenuComposer
                 $this->aboutUs = null;
             }
         }
+
+        if (!$this->services) {
+            try {
+                $this->services = Service::active()->ordered()->get();
+            } catch (\Exception $e) {
+                $this->services = collect();
+            }
+        }
         
         return $view->with('menus', $this->menus)
                     ->with('heroBanners', $this->heroBanners)
-                    ->with('aboutUs', $this->aboutUs);
+                    ->with('aboutUs', $this->aboutUs)
+                    ->with('services', $this->services);
     }
 }

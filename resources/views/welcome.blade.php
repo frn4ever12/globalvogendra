@@ -14,6 +14,11 @@
         <x-about-us-section :aboutUs="$aboutUs" />
     @endif
 
+    <!-- Services Section -->
+    @if(isset($services))
+        <x-services-section :services="$services" />
+    @endif
+
     @include('Frontend.includes.university-slider')
     <div class="m-0 my-4 row align-items-center">
         @include('Frontend.includes.stories-slider')

@@ -22,10 +22,14 @@
                     <li><a href="{{route('dashboard')}}"><i class="fa fa-home"></i> Dashboard </a></li>
                     <li><a href="{{route('admin.hero-banner.index')}}"><i class="fa fa-image"></i> Hero Banners </a></li>
                     <li><a href="{{route('admin.about-us.show')}}"><i class="fa fa-info-circle"></i> About Us </a></li>
-                    <li><a href="{{route('admin.menu.index')}}"><i class="fa fa-bars"></i> Menus </a></li>
-                    <li><a href="{{route('admin.submenu.index')}}"><i class="fa fa-list"></i> Sub Menus </a></li>
-                    <li><a href="{{route('admin.page.index')}}"><i class="fa fa-file"></i> Pages </a></li>
-
+                    <li><a><i class="fa fa-cog"></i> CMS<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{route('admin.service.index')}}"> Our Services </a></li>
+                            <li><a href="{{route('admin.menu.index')}}"> Menus </a></li>
+                            <li><a href="{{route('admin.submenu.index')}}"> Sub Menus </a></li>
+                            <li><a href="{{route('admin.page.index')}}"> Pages </a></li>
+                        </ul>
+                    </li>
                     <li><a href="{{route('admin.program.index')}}"><i class="fa fa-book"></i> Programs </a></li>
                     <li><a href="{{route('admin.university.index')}}"><i class="fa fa-graduation-cap"></i> Universities </a></li>
                     <li><a href="{{route('admin.country.index')}}"><i class="fa fa-globe"></i> Countries </a></li>
