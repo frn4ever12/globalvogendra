@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('menus', function (Blueprint $table) {
-            if (!Schema::hasColumn('menus', 'order_no')) {
-                $table->integer('order_no')->default(0);
+            if (!Schema::hasColumn('menus', 'icon')) {
+                $table->string('icon')->nullable();
             }
         });
     }
@@ -24,8 +24,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('menus', function (Blueprint $table) {
-            if (Schema::hasColumn('menus', 'order_no')) {
-                $table->dropColumn('order_no');
+            if (Schema::hasColumn('menus', 'icon')) {
+                $table->dropColumn('icon');
             }
         });
     }
