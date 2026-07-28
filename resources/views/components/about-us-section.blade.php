@@ -1,6 +1,6 @@
 @props(['aboutUs'])
 
-@if($aboutUs && $aboutUs->status)
+@if($aboutUs && ($aboutUs->status === true || $aboutUs->status === '1' || $aboutUs->status === 1))
     <section class="about-us-section" style="background-color: {{ $aboutUs->background_color ?? '#f8f9fa' }}; padding: 4rem 0;">
         <div class="container">
             <div class="row align-items-center">

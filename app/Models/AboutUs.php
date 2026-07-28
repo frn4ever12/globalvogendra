@@ -17,7 +17,7 @@ class AboutUs extends Model
 
     public function scopeActive($query)
     {
-        return $query->where('status', true);
+        return $query->where('status', true)->orWhere('status', '1');
     }
 
     public function scopeOrdered($query)
