@@ -3,7 +3,7 @@
 @section('content')
 <!-- Stat Cards -->
 <div class="stat-cards">
-    <x-stat-card 
+    <x-admin-components::stat-card 
         title="Total Countries" 
         value="{{ $countriesCount ?? 0 }}" 
         icon="globe" 
@@ -13,7 +13,7 @@
         :link="route('admin.country.index')"
     />
     
-    <x-stat-card 
+    <x-admin-components::stat-card 
         title="Total Universities" 
         value="{{ $universitiesCount ?? 0 }}" 
         icon="university" 
@@ -23,7 +23,7 @@
         :link="route('admin.university.index')"
     />
     
-    <x-stat-card 
+    <x-admin-components::stat-card 
         title="Total Programs" 
         value="{{ $programsCount ?? 0 }}" 
         icon="graduation-cap" 
@@ -33,7 +33,7 @@
         :link="route('admin.program.index')"
     />
     
-    <x-stat-card 
+    <x-admin-components::stat-card 
         title="Total Courses" 
         value="{{ $coursesCount ?? 0 }}" 
         icon="book" 
@@ -43,7 +43,7 @@
         :link="route('admin.course.index')"
     />
     
-    <x-stat-card 
+    <x-admin-components::stat-card 
         title="Total Services" 
         value="{{ $servicesCount ?? 0 }}" 
         icon="cogs" 
@@ -53,7 +53,7 @@
         :link="route('admin.service.index')"
     />
     
-    <x-stat-card 
+    <x-admin-components::stat-card 
         title="Total Events" 
         value="{{ $eventsCount ?? 0 }}" 
         icon="calendar-alt" 
@@ -63,7 +63,7 @@
         :link="route('admin.event.index')"
     />
     
-    <x-stat-card 
+    <x-admin-components::stat-card 
         title="Total Appointments" 
         value="{{ $appointmentsCount ?? 0 }}" 
         icon="calendar-check" 
@@ -73,7 +73,7 @@
         :link="route('admin.appointment.index')"
     />
     
-    <x-stat-card 
+    <x-admin-components::stat-card 
         title="Website Visitors" 
         value="{{ $visitorsCount ?? 1250 }}" 
         icon="users" 
@@ -85,7 +85,7 @@
 
 <!-- Charts Section -->
 <div class="charts-section">
-    <x-chart-card 
+    <x-admin-components::chart-card 
         title="Admissions by Country"
         chartId="admissionsChart"
         type="bar"
@@ -103,7 +103,7 @@
         ]"
     />
     
-    <x-chart-card 
+    <x-admin-components::chart-card 
         title="Programs Distribution"
         chartId="programsChart"
         type="doughnut"
@@ -136,7 +136,7 @@
 
 <!-- Data Tables Section -->
 <div class="tables-section">
-    <x-table-card 
+    <x-admin-components::table-card 
         title="Recent Appointments"
         :columns="['Student', 'Country', 'Program', 'Status', 'Date']"
         :rows="[
@@ -149,7 +149,7 @@
         :link="route('admin.appointment.index')"
     />
     
-    <x-table-card 
+    <x-admin-components::table-card 
         title="Latest Contact Inquiries"
         :columns="['Name', 'Email', 'Subject', 'Status', 'Date']"
         :rows="[
@@ -161,13 +161,13 @@
 </div>
 
 <!-- Calendar Section -->
-<x-calendar-card 
+<x-admin-components::calendar-card 
     :events="$events ?? collect()"
     :appointments="$appointments ?? collect()"
 />
 
 <!-- Recent Activity -->
-<x-activity-timeline 
+<x-admin-components::activity-timeline 
     :activities="[
         ['title' => 'New Program Added', 'time' => '2 hours ago'],
         ['title' => 'University Updated', 'time' => '4 hours ago'],

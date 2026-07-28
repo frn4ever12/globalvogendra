@@ -12,7 +12,7 @@ class MenuComposer
     private $menus;
     private $heroBanners;
     private $aboutUs;
-    private $services;
+    private $siteServices;
     
     public function compose(View $view)
     {
@@ -43,17 +43,17 @@ class MenuComposer
             }
         }
 
-        if (!$this->services) {
+        if (!$this->siteServices) {
             try {
-                $this->services = Service::active()->ordered()->get();
+                $this->siteServices = Service::active()->ordered()->get();
             } catch (\Exception $e) {
-                $this->services = collect();
+                $this->siteServices = collect();
             }
         }
         
         return $view->with('menus', $this->menus)
                     ->with('heroBanners', $this->heroBanners)
                     ->with('aboutUs', $this->aboutUs)
-                    ->with('services', $this->services);
+                    ->with('services', $this->siteServices);
     }
 }

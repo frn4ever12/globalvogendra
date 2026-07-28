@@ -30,7 +30,12 @@
 
     <!-- About Us Section -->
     <?php if(isset($aboutUs)): ?>
-        <?php if (isset($component)) { $__componentOriginalfc161fe03571607c9739cc956beb8abb = $component; } ?>
+        <?php if($aboutUs): ?>
+            <div class="alert alert-info">
+                About Us found. Status: <?php echo e(var_dump($aboutUs->status)); ?>
+
+            </div>
+            <?php if (isset($component)) { $__componentOriginalfc161fe03571607c9739cc956beb8abb = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalfc161fe03571607c9739cc956beb8abb = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.about-us-section','data' => ['aboutUs' => $aboutUs]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('about-us-section'); ?>
@@ -50,6 +55,15 @@
 <?php $component = $__componentOriginalfc161fe03571607c9739cc956beb8abb; ?>
 <?php unset($__componentOriginalfc161fe03571607c9739cc956beb8abb); ?>
 <?php endif; ?>
+        <?php else: ?>
+            <div class="alert alert-warning">
+                About Us variable is null.
+            </div>
+        <?php endif; ?>
+    <?php else: ?>
+        <div class="alert alert-warning">
+            About Us data not found in database.
+        </div>
     <?php endif; ?>
 
     <!-- Services Section -->
