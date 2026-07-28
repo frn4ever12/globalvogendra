@@ -90,6 +90,54 @@
 <?php endif; ?>
     <?php endif; ?>
 
+    <!-- Process Section -->
+    <?php if(isset($processes)): ?>
+        <?php if (isset($component)) { $__componentOriginal8d64a640a632c633580a0d19d3d59f61 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal8d64a640a632c633580a0d19d3d59f61 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.process-section','data' => ['processes' => $processes]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('process-section'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['processes' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($processes)]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal8d64a640a632c633580a0d19d3d59f61)): ?>
+<?php $attributes = $__attributesOriginal8d64a640a632c633580a0d19d3d59f61; ?>
+<?php unset($__attributesOriginal8d64a640a632c633580a0d19d3d59f61); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal8d64a640a632c633580a0d19d3d59f61)): ?>
+<?php $component = $__componentOriginal8d64a640a632c633580a0d19d3d59f61; ?>
+<?php unset($__componentOriginal8d64a640a632c633580a0d19d3d59f61); ?>
+<?php endif; ?>
+    <?php endif; ?>
+
+    <!-- Why Choose Us Section -->
+    <?php if(isset($whyChooseUs)): ?>
+        <?php if (isset($component)) { $__componentOriginal3f0137ce72d1417ab45999dfab209408 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal3f0137ce72d1417ab45999dfab209408 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.why-choose-us-section','data' => ['features' => $whyChooseUs]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('why-choose-us-section'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['features' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($whyChooseUs)]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal3f0137ce72d1417ab45999dfab209408)): ?>
+<?php $attributes = $__attributesOriginal3f0137ce72d1417ab45999dfab209408; ?>
+<?php unset($__attributesOriginal3f0137ce72d1417ab45999dfab209408); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal3f0137ce72d1417ab45999dfab209408)): ?>
+<?php $component = $__componentOriginal3f0137ce72d1417ab45999dfab209408; ?>
+<?php unset($__componentOriginal3f0137ce72d1417ab45999dfab209408); ?>
+<?php endif; ?>
+    <?php endif; ?>
+
     <?php echo $__env->make('Frontend.includes.university-slider', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <div class="m-0 my-4 row align-items-center">
         <?php echo $__env->make('Frontend.includes.stories-slider', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
