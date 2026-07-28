@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+  font-size: 1.5rem !important;
+  font-family: "Poppins", sans-serif !important;
+}
+nav,.left_col,.navbar,.dropdown-menu,.nav>li>a{
+  background-color: white !important;
+  color: #000000 !important;
+}
+.nav li a,.site_title,#menu_toggle{
+  color: #000000 !important;
+}
+
+.nav li a{
+  font-size: 1.3rem;
+}
+.side-menu>li>a:hover{
+  background-color: rgb(225, 225, 225);
+  color: black !important;
+}
+.menu_fixed {
+  border-right: 1px solid rgb(190, 190, 190);
+}
+.nav_menu{
+  background-color: #2A3F54 ;
+  color: white;
+}
+.nav_menu a,
+.nav.navbar-nav>li>a {
+  color: white !important;
+}
+.current-page{
+  border-top:0.5px solid rgb(230, 230, 230);
+  border-bottom:0.5px solid rgb(230, 230, 230);
+}
+.custom-alert {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.custom-error-alert {
+  background-color: #f15347;
+  color: #ffffff;
+  padding: 10px;
+  border: 1px solid #f49494;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 20px; 
+}
+
+.error-message{
+  color: red;
+}
+
+li h5{
+  color: white;
+  padding: 1rem;
+}
+
+.nav_title{
+  border: 0; padding:1rem; margin-bottom: 0.4rem;
+}
+.site_title{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav_menu>nav{
+  display: flex;
+  justify-content: space-between;
+}
+.nav.toggle{
+  display: flex; 
+  align-items: center;
+  padding: 0;
+  width: 50%;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .nav_title{
+    padding: 0.4rem;
+    margin: auto;
+  }
+  .navbar-nav .open .dropdown-menu {
+    margin-top: 0;
+  }
+  .header-date-today h5,.header-arthik-barsa h5,.progress-chart{
+      display: none; 
+  }
+
+}
+form input,form select {
+  height: 4rem !important;
+}
+form input[type="checkbox"] {
+  height: initial !important;
+}
+@media print {
+  .top_nav,button,footer,.title-head,.x_panel,select,#alert{
+    display: none !important;
+}
+input{
+  border: 0 !important;
+}
+.nyekFormatValidation{
+  display: none !important;
+}
+#datatable-responsive_wrapper .row:first-child,#datatable-responsive_wrapper .row:last-child{
+  display: none;
+}
+#datatable-responsive thead th::after{
+  display: none;
+}
+#datatable-responsive tr th:last-child,#datatable-responsive tr td:last-child{
+  display: none;
+}
+}
+.tox-statusbar__branding{
+  display: none;
+}

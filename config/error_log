@@ -1,0 +1,28 @@
+[02-Feb-2026 11:30:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/dmcgrou1/globalexceledu.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/dmcgrou1/globalexceledu.com/config/app.php on line 16
+[12-Feb-2026 01:25:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/dmcgrou1/globalexceledu.com/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/dmcgrou1/globalexceledu.com/config/cache.php on line 18
+[30-May-2026 09:51:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/dmcgrou1/globalexceledu.com/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/dmcgrou1/globalexceledu.com/config/mail.php on line 17
+[16-Jul-2026 07:52:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/dmcgrou1/globalexceledu.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/dmcgrou1/globalexceledu.com/config/app.php on line 16
+[16-Jul-2026 07:52:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/dmcgrou1/globalexceledu.com/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/dmcgrou1/globalexceledu.com/config/mail.php on line 17
+[17-Jul-2026 23:53:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/dmcgrou1/globalexceledu.com/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/dmcgrou1/globalexceledu.com/config/database.php on line 19
+[25-Jul-2026 18:23:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/dmcgrou1/globalexceledu.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/dmcgrou1/globalexceledu.com/config/app.php on line 16
