@@ -11,11 +11,14 @@
 
     <!-- About Us Section -->
     @if(isset($aboutUs))
-        @if($aboutUs && ($aboutUs->status === true || $aboutUs->status === '1' || $aboutUs->status === 1))
+        @if($aboutUs)
+            <div class="alert alert-info">
+                About Us found. Status: {{ var_dump($aboutUs->status) }}
+            </div>
             <x-about-us-section :aboutUs="$aboutUs" />
         @else
             <div class="alert alert-warning">
-                About Us data exists but status is inactive. Status: {{ $aboutUs->status }}
+                About Us variable is null.
             </div>
         @endif
     @else
