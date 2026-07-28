@@ -112,14 +112,46 @@
         @media (max-width: 768px) {
             .hero-content h1 {
                 font-size: 1.5rem !important;
+                line-height: 1.3;
             }
             
             .hero-content h2 {
                 font-size: 1rem !important;
+                line-height: 1.3;
             }
             
             .hero-content p {
                 font-size: 0.875rem !important;
+                line-height: 1.4;
+            }
+            
+            .hero-content .btn {
+                font-size: 0.85rem !important;
+                padding: 8px 20px !important;
+            }
+            
+            .col-lg-8, .col-md-10 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-content h1 {
+                font-size: 1.25rem !important;
+            }
+            
+            .hero-content h2 {
+                font-size: 0.9rem !important;
+            }
+            
+            .hero-content p {
+                font-size: 0.8rem !important;
+            }
+            
+            .hero-content .btn {
+                font-size: 0.8rem !important;
+                padding: 6px 15px !important;
             }
         }
     </style>

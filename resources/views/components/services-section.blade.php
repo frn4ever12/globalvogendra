@@ -94,15 +94,62 @@
             box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 991px) {
             .services-section h2 {
                 font-size: 2rem !important;
+            }
+            
+            .services-section h6 {
+                font-size: 0.9rem !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-section h2 {
+                font-size: 1.75rem !important;
+            }
+            
+            .services-section h6 {
+                font-size: 0.85rem !important;
+            }
+            
+            .service-image-wrapper {
+                height: 180px !important;
+            }
+            
+            .service-card h5 {
+                font-size: 1.1rem !important;
+            }
+            
+            .service-card p {
+                font-size: 0.9rem !important;
             }
         }
 
         @media (max-width: 576px) {
             .services-section h2 {
-                font-size: 1.75rem !important;
+                font-size: 1.5rem !important;
+            }
+            
+            .services-section h6 {
+                font-size: 0.8rem !important;
+            }
+            
+            .service-image-wrapper {
+                height: 150px !important;
+            }
+            
+            .service-card h5 {
+                font-size: 1rem !important;
+            }
+            
+            .service-card p {
+                font-size: 0.85rem !important;
+            }
+            
+            .service-card .btn {
+                font-size: 0.85rem !important;
+                padding: 8px 20px !important;
             }
         }
     </style>

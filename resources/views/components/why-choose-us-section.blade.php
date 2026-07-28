@@ -268,8 +268,27 @@
         font-size: 2.2rem;
     }
     
+    .section-subtitle {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+    
+    .section-subtitle-text {
+        font-size: 1rem;
+    }
+    
     .why-choose-card {
         margin-bottom: 30px;
+        padding: 35px 20px;
+    }
+    
+    .feature-icon-wrapper {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .feature-icon {
+        font-size: 36px;
     }
 }
 
@@ -278,25 +297,37 @@
         font-size: 1.8rem;
     }
     
+    .section-subtitle {
+        font-size: 11px;
+        padding: 5px 12px;
+    }
+    
     .section-subtitle-text {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .why-choose-card {
-        padding: 30px 20px;
+        padding: 30px 15px;
     }
     
     .feature-icon-wrapper {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
     }
     
     .feature-icon {
-        font-size: 32px;
+        font-size: 28px;
     }
     
     .feature-title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .feature-description {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
     }
     
     .counter-number {
@@ -305,6 +336,63 @@
     
     .counter-suffix {
         font-size: 1.5rem;
+    }
+    
+    .feature-btn {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 10px;
+        padding: 4px 10px;
+    }
+    
+    .section-subtitle-text {
+        font-size: 0.85rem;
+    }
+    
+    .why-choose-card {
+        padding: 25px 12px;
+    }
+    
+    .feature-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+    
+    .feature-icon {
+        font-size: 24px;
+    }
+    
+    .feature-title {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .feature-description {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
+    }
+    
+    .counter-number {
+        font-size: 2rem;
+    }
+    
+    .counter-suffix {
+        font-size: 1.2rem;
+    }
+    
+    .feature-btn {
+        font-size: 0.75rem;
+        padding: 8px 15px;
     }
 }
 </style>

@@ -363,8 +363,27 @@
         font-size: 2.2rem;
     }
     
+    .section-subtitle {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+    
+    .section-subtitle-text {
+        font-size: 1rem;
+    }
+    
     .level-card {
         margin-bottom: 30px;
+        padding: 25px 15px;
+    }
+    
+    .level-icon-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .level-icon {
+        font-size: 28px;
     }
 }
 
@@ -373,17 +392,23 @@
         font-size: 1.8rem;
     }
     
+    .section-subtitle {
+        font-size: 11px;
+        padding: 5px 12px;
+    }
+    
     .section-subtitle-text {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .level-card {
-        padding: 25px 15px;
+        padding: 20px 12px;
     }
     
     .level-icon-wrapper {
         width: 60px;
         height: 60px;
+        margin-bottom: 15px;
     }
     
     .level-icon {
@@ -392,10 +417,83 @@
     
     .level-title {
         font-size: 1rem;
+        margin-bottom: 8px;
     }
     
     .level-description {
         font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+    
+    .level-details {
+        margin-bottom: 12px;
+    }
+    
+    .detail-item {
+        font-size: 0.75rem;
+    }
+    
+    .counter-number {
+        font-size: 1.3rem;
+    }
+    
+    .counter-label {
+        font-size: 0.7rem;
+    }
+    
+    .level-btn {
+        font-size: 0.75rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 10px;
+        padding: 4px 10px;
+    }
+    
+    .section-subtitle-text {
+        font-size: 0.85rem;
+    }
+    
+    .level-card {
+        padding: 18px 10px;
+    }
+    
+    .level-icon-wrapper {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 12px;
+    }
+    
+    .level-icon {
+        font-size: 20px;
+    }
+    
+    .level-title {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+    
+    .level-description {
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+    
+    .level-badge {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .level-btn {
+        font-size: 0.7rem;
+        padding: 6px 12px;
     }
 }
 </style>
