@@ -56,7 +56,6 @@ Route::get('/gre',[PageController::class,'gre'])->name('learning.gre');
 Route::get('/gmat',[PageController::class,'gmat'])->name('learning.gmat');
 
 //service routes
-Route::get('/services',[PageController::class,'services'])->name('services');
 Route::get('/predeparture',[PageController::class,'predeparture'])->name('predeparture');
 Route::get('/testpreparation',[PageController::class,'testpreparation'])->name('testpreparation');
 Route::get('/studentaccomodation',[PageController::class,'studentaccomodation'])->name('studentaccomodation');
