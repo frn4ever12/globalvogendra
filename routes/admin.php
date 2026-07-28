@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AboutUsController;
 use App\Http\Controllers\Admin\AppointmentController;
 use App\Http\Controllers\Admin\CountryController;
 use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FaqsController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\GalleryController;
@@ -21,6 +22,7 @@ use App\Http\Controllers\Admin\UniversityController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth'])->group(function () {
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('site/setting',[SiteSettingController::class,'setting'])->name('site.setting');
 Route::put('site/setting/{setting}',[SiteSettingController::class,'settingUpdate'])->name('site.setting.update');
 
