@@ -1,15 +1,15 @@
-<script src="/plugins/jquery/dist/jquery.min.js?v={{time()}}"></script>
+<script src="{{ asset('plugins/jquery/dist/jquery.min.js') }}?v={{time()}}"></script>
 <!-- Bootstrap -->
-<script src="/plugins/bootstrap/dist/js/bootstrap.min.js?v={{time()}}"></script>
+<script src="{{ asset('plugins/bootstrap/dist/js/bootstrap.min.js') }}?v={{time()}}"></script>
 <!-- FastClick -->
-<script src="/plugins/fastclick/lib/fastclick.js?v={{time()}}"></script>
+<script src="{{ asset('plugins/fastclick/lib/fastclick.js') }}?v={{time()}}"></script>
 <!-- NProgress -->
-<script src="/plugins/nprogress/nprogress.js?v={{time()}}"></script>
+<script src="{{ asset('plugins/nprogress/nprogress.js') }}?v={{time()}}"></script>
 <!-- jQuery custom content scroller -->
-<script src="/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js?v={{time()}}"></script>
+<script src="{{ asset('plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js') }}?v={{time()}}"></script>
 
 <!-- Custom Theme Scripts -->
-<script src="/dist/js/custom.min.js?v={{time()}}"></script>
+<script src="{{ asset('dist/js/custom.min.js') }}?v={{time()}}"></script>
 <script>
     $(document).ready(function() {
         $('#logOutBtn').on('click', function(e) {
