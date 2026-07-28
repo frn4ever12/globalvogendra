@@ -5,7 +5,7 @@
                 @if ($setting && $setting->logo)
                 <img src="{{ asset('storage/' . $setting->logo) }}" height="32px" width="42px">
                 @else
-                <img src="{{ asset('dist/img/logo.jpg') }}" height="32px" width="42px" alt="">
+                <img src="https://cdn.jsdelivr.net/gh/frn4ever12/globalvogendra@main/public/dist/img/logo.jpg" height="32px" width="42px" alt="">
                 @endif
                 <span style="font-size: 0.65rem;">{{$setting->name ?? 'Organization Name'}}</span>
             </a>
@@ -70,12 +70,12 @@
                 <li class="">
                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                         aria-expanded="false">
-                        <img src="{{ $setting && $setting->logo ? asset('storage/' . $setting->logo) : asset('dist/img/logo.jpg') }}" style="width: 40px"  alt="">
+                        <img src="{{ $setting && $setting->logo ? asset('storage/' . $setting->logo) : 'https://cdn.jsdelivr.net/gh/frn4ever12/globalvogendra@main/public/dist/img/logo.jpg' }}" style="width: 40px"  alt="">
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
                         <li>
                             <div style="display: flex;align-items: center; gap:1rem;padding:1rem;">
-                                <img src="{{ $setting && $setting->logo ? asset('storage/' . $setting->logo) : asset('dist/img/logo.jpg') }}"
+                                <img src="{{ $setting && $setting->logo ? asset('storage/' . $setting->logo) : 'https://cdn.jsdelivr.net/gh/frn4ever12/globalvogendra@main/public/dist/img/logo.jpg' }}"
                                     class="img-circle elevation-2" height="36px" width="48px">
                                     <br>
                                 <strong style="font-size: 18px;">{{ Auth::user()->name }}</strong>

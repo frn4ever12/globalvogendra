@@ -3,9 +3,9 @@
         <div class="navbar nav_title">
             <a href="<?php echo e(route('dashboard')); ?>" class="site_title">
                 <?php if($setting && $setting->logo): ?>
-                <img src="/storage/<?php echo e($setting->logo); ?>" height="32px" width="42px">
+                <img src="<?php echo e(asset('storage/' . $setting->logo)); ?>" height="32px" width="42px">
                 <?php else: ?>
-                <img src="/dist/img/logo.jpg" height="32px" width="42px" alt="">
+                <img src="<?php echo e(asset('dist/img/logo.jpg')); ?>" height="32px" width="42px" alt="">
                 <?php endif; ?>
                 <span style="font-size: 0.65rem;"><?php echo e($setting->name ?? 'Organization Name'); ?></span>
             </a>
@@ -22,10 +22,14 @@
                     <li><a href="<?php echo e(route('dashboard')); ?>"><i class="fa fa-home"></i> Dashboard </a></li>
                     <li><a href="<?php echo e(route('admin.hero-banner.index')); ?>"><i class="fa fa-image"></i> Hero Banners </a></li>
                     <li><a href="<?php echo e(route('admin.about-us.show')); ?>"><i class="fa fa-info-circle"></i> About Us </a></li>
-                    <li><a href="<?php echo e(route('admin.menu.index')); ?>"><i class="fa fa-bars"></i> Menus </a></li>
-                    <li><a href="<?php echo e(route('admin.submenu.index')); ?>"><i class="fa fa-list"></i> Sub Menus </a></li>
-                    <li><a href="<?php echo e(route('admin.page.index')); ?>"><i class="fa fa-file"></i> Pages </a></li>
-
+                    <li><a><i class="fa fa-cog"></i> CMS<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="<?php echo e(route('admin.service.index')); ?>"> Our Services </a></li>
+                            <li><a href="<?php echo e(route('admin.menu.index')); ?>"> Menus </a></li>
+                            <li><a href="<?php echo e(route('admin.submenu.index')); ?>"> Sub Menus </a></li>
+                            <li><a href="<?php echo e(route('admin.page.index')); ?>"> Pages </a></li>
+                        </ul>
+                    </li>
                     <li><a href="<?php echo e(route('admin.program.index')); ?>"><i class="fa fa-book"></i> Programs </a></li>
                     <li><a href="<?php echo e(route('admin.university.index')); ?>"><i class="fa fa-graduation-cap"></i> Universities </a></li>
                     <li><a href="<?php echo e(route('admin.country.index')); ?>"><i class="fa fa-globe"></i> Countries </a></li>
@@ -66,12 +70,12 @@
                 <li class="">
                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                         aria-expanded="false">
-                        <img src="<?php echo e($setting && $setting->logo ? '/storage/'.$setting->logo : '/dist/img/logo.jpg'); ?>" style="width: 40px"  alt="">
+                        <img src="<?php echo e($setting && $setting->logo ? asset('storage/' . $setting->logo) : asset('dist/img/logo.jpg')); ?>" style="width: 40px"  alt="">
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
                         <li>
                             <div style="display: flex;align-items: center; gap:1rem;padding:1rem;">
-                                <img src="<?php echo e($setting && $setting->logo ? '/storage/'.$setting->logo : '/dist/img/logo.jpg'); ?>"
+                                <img src="<?php echo e($setting && $setting->logo ? asset('storage/' . $setting->logo) : asset('dist/img/logo.jpg')); ?>"
                                     class="img-circle elevation-2" height="36px" width="48px">
                                     <br>
                                 <strong style="font-size: 18px;"><?php echo e(Auth::user()->name); ?></strong>

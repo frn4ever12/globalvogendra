@@ -1,15 +1,15 @@
-<script src="/plugins/jquery/dist/jquery.min.js?v=<?php echo e(time()); ?>"></script>
+<script src="<?php echo e(asset('plugins/jquery/dist/jquery.min.js')); ?>?v=<?php echo e(time()); ?>"></script>
 <!-- Bootstrap -->
-<script src="/plugins/bootstrap/dist/js/bootstrap.min.js?v=<?php echo e(time()); ?>"></script>
+<script src="<?php echo e(asset('plugins/bootstrap/dist/js/bootstrap.min.js')); ?>?v=<?php echo e(time()); ?>"></script>
 <!-- FastClick -->
-<script src="/plugins/fastclick/lib/fastclick.js?v=<?php echo e(time()); ?>"></script>
+<script src="<?php echo e(asset('plugins/fastclick/lib/fastclick.js')); ?>?v=<?php echo e(time()); ?>"></script>
 <!-- NProgress -->
-<script src="/plugins/nprogress/nprogress.js?v=<?php echo e(time()); ?>"></script>
+<script src="<?php echo e(asset('plugins/nprogress/nprogress.js')); ?>?v=<?php echo e(time()); ?>"></script>
 <!-- jQuery custom content scroller -->
-<script src="/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js?v=<?php echo e(time()); ?>"></script>
+<script src="<?php echo e(asset('plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')); ?>?v=<?php echo e(time()); ?>"></script>
 
 <!-- Custom Theme Scripts -->
-<script src="/dist/js/custom.min.js?v=<?php echo e(time()); ?>"></script>
+<script src="<?php echo e(asset('dist/js/custom.min.js')); ?>?v=<?php echo e(time()); ?>"></script>
 <script>
     $(document).ready(function() {
         $('#logOutBtn').on('click', function(e) {
