@@ -42,6 +42,11 @@
         <x-why-choose-us-section :features="$whyChooseUs" />
     @endif
 
+    <!-- German Language Levels Section -->
+    @if(isset($germanLanguageLevels))
+        <x-german-language-levels-section :levels="$germanLanguageLevels" />
+    @endif
+
     @include('Frontend.includes.university-slider')
     <div class="m-0 my-4 row align-items-center">
         @include('Frontend.includes.stories-slider')

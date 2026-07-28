@@ -116,6 +116,13 @@
             </li>
             
             <li class="sidebar-menu-item">
+                <a href="{{ route('admin.german-language-level.index') }}" class="sidebar-menu-link {{ request()->is('admin/german-language-level*') ? 'active' : '' }}">
+                    <i class="fas fa-language"></i>
+                    <span>German Levels</span>
+                </a>
+            </li>
+            
+            <li class="sidebar-menu-item">
                 <a href="{{ route('admin.event.index') }}" class="sidebar-menu-link {{ request()->is('admin/event*') ? 'active' : '' }}">
                     <i class="fas fa-calendar-alt"></i>
                     <span>Events</span>

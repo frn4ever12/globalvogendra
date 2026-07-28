@@ -21,6 +21,7 @@ use App\Http\Controllers\Admin\SubMenuController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\UniversityController;
 use App\Http\Controllers\Admin\WhyChooseUsController;
+use App\Http\Controllers\Admin\GermanLanguageLevelController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth'])->group(function () {
@@ -47,6 +48,7 @@ Route::resource('submenu',SubMenuController::class);
 Route::resource('page',PageController::class);
 Route::resource('process',ProcessController::class);
 Route::resource('why-choose-us',WhyChooseUsController::class);
+Route::resource('german-language-level',GermanLanguageLevelController::class);
 
 // AJAX routes for Gallery
 Route::post('gallery', [GalleryController::class, 'store'])->name('gallery.store');
@@ -80,5 +82,9 @@ Route::post('process/{process}/toggle-status', [ProcessController::class, 'toggl
 // AJAX routes for WhyChooseUs
 Route::post('why-choose-us/reorder', [WhyChooseUsController::class, 'reorder'])->name('why-choose-us.reorder');
 Route::post('why-choose-us/{whyChooseUs}/toggle-status', [WhyChooseUsController::class, 'toggleStatus'])->name('why-choose-us.toggle-status');
+
+// AJAX routes for GermanLanguageLevels
+Route::post('german-language-level/reorder', [GermanLanguageLevelController::class, 'reorder'])->name('german-language-level.reorder');
+Route::post('german-language-level/{germanLanguageLevel}/toggle-status', [GermanLanguageLevelController::class, 'toggleStatus'])->name('german-language-level.toggle-status');
 
 });

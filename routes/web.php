@@ -3,6 +3,7 @@
 use App\Http\Controllers\Frontend\AppointmentController;
 use App\Http\Controllers\Frontend\PageController;
 use App\Http\Controllers\Frontend\ServiceController;
+use App\Http\Controllers\GermanLevelController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,9 @@ Route::get('/', [PageController::class, 'index'])->name('home');
 // Service routes (must be before dynamic routes)
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('service.detail');
+
+// German Language Level routes
+Route::get('/german-level/{slug}', [GermanLevelController::class, 'show'])->name('german-level.show');
 
 // Dynamic page routes with SEO-friendly URLs
 Route::get('/{menuSlug}', [PageController::class, 'menuPage'])->name('menu.page');

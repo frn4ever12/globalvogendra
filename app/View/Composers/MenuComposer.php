@@ -7,6 +7,7 @@ use App\Models\Process;
 use App\Models\Service;
 use App\Models\Menu;
 use App\Models\WhyChooseUs;
+use App\Models\GermanLanguageLevel;
 use Illuminate\View\View;
 
 class MenuComposer
@@ -17,6 +18,7 @@ class MenuComposer
     private $siteServices;
     private $processes;
     private $whyChooseUs;
+    private $germanLanguageLevels;
     
     public function compose(View $view)
     {
@@ -75,12 +77,21 @@ class MenuComposer
                 $this->whyChooseUs = collect();
             }
         }
+
+        if (!$this->germanLanguageLevels) {
+            try {
+                $this->germanLanguageLevels = GermanLanguageLevel::active()->ordered()->get();
+            } catch (\Exception $e) {
+                $this->germanLanguageLevels = collect();
+            }
+        }
         
         return $view->with('menus', $this->menus)
                     ->with('heroBanners', $this->heroBanners)
                     ->with('aboutUs', $this->aboutUs)
                     ->with('frontendServices', $this->siteServices)
                     ->with('processes', $this->processes)
-                    ->with('whyChooseUs', $this->whyChooseUs);
+                    ->with('whyChooseUs', $this->whyChooseUs)
+                    ->with('germanLanguageLevels', $this->germanLanguageLevels);
     }
 }
