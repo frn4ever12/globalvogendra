@@ -5,7 +5,7 @@
         <div class="container">
             <!-- Section Headings -->
             <div class="text-center mb-5">
-                <h6 class="text-success fw-bold text-uppercase mb-2" style="letter-spacing: 2px;">Our Services</h6>
+                <h6 class="text-success fw-bold text-uppercase mb-2" style="letter-spacing: 2px;">What We Do</h6>
                 <h2 class="fw-bold mb-3" style="color: #0056b3; font-size: 2.5rem;">Services We Offer</h2>
                 <div class="mx-auto" style="width: 80px; height: 4px; background: linear-gradient(90deg, #28a745, #0056b3); border-radius: 2px;"></div>
             </div>

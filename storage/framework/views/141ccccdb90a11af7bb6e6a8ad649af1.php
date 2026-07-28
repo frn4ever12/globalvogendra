@@ -138,6 +138,30 @@
 <?php endif; ?>
     <?php endif; ?>
 
+    <!-- Visa Success Stories Section -->
+    <?php if(isset($visaSuccessStories)): ?>
+        <?php if (isset($component)) { $__componentOriginal174f5ce8648b7803cb2d9cc7ebb9f304 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal174f5ce8648b7803cb2d9cc7ebb9f304 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.visa-success-stories-section','data' => ['stories' => $visaSuccessStories]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('visa-success-stories-section'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['stories' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($visaSuccessStories)]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal174f5ce8648b7803cb2d9cc7ebb9f304)): ?>
+<?php $attributes = $__attributesOriginal174f5ce8648b7803cb2d9cc7ebb9f304; ?>
+<?php unset($__attributesOriginal174f5ce8648b7803cb2d9cc7ebb9f304); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal174f5ce8648b7803cb2d9cc7ebb9f304)): ?>
+<?php $component = $__componentOriginal174f5ce8648b7803cb2d9cc7ebb9f304; ?>
+<?php unset($__componentOriginal174f5ce8648b7803cb2d9cc7ebb9f304); ?>
+<?php endif; ?>
+    <?php endif; ?>
+
     <!-- German Language Levels Section -->
     <?php if(isset($germanLanguageLevels)): ?>
         <?php if (isset($component)) { $__componentOriginal4a1ba3406e6d66f52b6e4f40616462b3 = $component; } ?>
