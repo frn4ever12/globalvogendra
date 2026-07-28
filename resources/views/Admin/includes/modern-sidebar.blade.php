@@ -109,6 +109,13 @@
             </li>
             
             <li class="sidebar-menu-item">
+                <a href="{{ route('admin.why-choose-us.index') }}" class="sidebar-menu-link {{ request()->is('admin/why-choose-us*') ? 'active' : '' }}">
+                    <i class="fas fa-star"></i>
+                    <span>Why Choose Us</span>
+                </a>
+            </li>
+            
+            <li class="sidebar-menu-item">
                 <a href="{{ route('admin.event.index') }}" class="sidebar-menu-link {{ request()->is('admin/event*') ? 'active' : '' }}">
                     <i class="fas fa-calendar-alt"></i>
                     <span>Events</span>

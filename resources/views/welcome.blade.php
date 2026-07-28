@@ -37,6 +37,11 @@
         <x-process-section :processes="$processes" />
     @endif
 
+    <!-- Why Choose Us Section -->
+    @if(isset($whyChooseUs))
+        <x-why-choose-us-section :features="$whyChooseUs" />
+    @endif
+
     @include('Frontend.includes.university-slider')
     <div class="m-0 my-4 row align-items-center">
         @include('Frontend.includes.stories-slider')

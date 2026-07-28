@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Admin\SubMenuController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\UniversityController;
+use App\Http\Controllers\Admin\WhyChooseUsController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth'])->group(function () {
@@ -45,6 +46,7 @@ Route::resource('menu',MenuController::class);
 Route::resource('submenu',SubMenuController::class);
 Route::resource('page',PageController::class);
 Route::resource('process',ProcessController::class);
+Route::resource('why-choose-us',WhyChooseUsController::class);
 
 // AJAX routes for Gallery
 Route::post('gallery', [GalleryController::class, 'store'])->name('gallery.store');
@@ -74,5 +76,9 @@ Route::post('service/{service}/toggle-status', [ServiceController::class, 'toggl
 // AJAX routes for Processes
 Route::post('process/reorder', [ProcessController::class, 'reorder'])->name('process.reorder');
 Route::post('process/{process}/toggle-status', [ProcessController::class, 'toggleStatus'])->name('process.toggle-status');
+
+// AJAX routes for WhyChooseUs
+Route::post('why-choose-us/reorder', [WhyChooseUsController::class, 'reorder'])->name('why-choose-us.reorder');
+Route::post('why-choose-us/{whyChooseUs}/toggle-status', [WhyChooseUsController::class, 'toggleStatus'])->name('why-choose-us.toggle-status');
 
 });
