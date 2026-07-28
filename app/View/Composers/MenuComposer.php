@@ -8,6 +8,7 @@ use App\Models\Service;
 use App\Models\Menu;
 use App\Models\WhyChooseUs;
 use App\Models\GermanLanguageLevel;
+use App\Models\VisaSuccessStory;
 use Illuminate\View\View;
 
 class MenuComposer
@@ -19,6 +20,7 @@ class MenuComposer
     private $processes;
     private $whyChooseUs;
     private $germanLanguageLevels;
+    private $visaSuccessStories;
     
     public function compose(View $view)
     {
@@ -85,6 +87,14 @@ class MenuComposer
                 $this->germanLanguageLevels = collect();
             }
         }
+
+        if (!$this->visaSuccessStories) {
+            try {
+                $this->visaSuccessStories = VisaSuccessStory::active()->ordered()->get();
+            } catch (\Exception $e) {
+                $this->visaSuccessStories = collect();
+            }
+        }
         
         return $view->with('menus', $this->menus)
                     ->with('heroBanners', $this->heroBanners)
@@ -92,6 +102,7 @@ class MenuComposer
                     ->with('frontendServices', $this->siteServices)
                     ->with('processes', $this->processes)
                     ->with('whyChooseUs', $this->whyChooseUs)
-                    ->with('germanLanguageLevels', $this->germanLanguageLevels);
+                    ->with('germanLanguageLevels', $this->germanLanguageLevels)
+                    ->with('visaSuccessStories', $this->visaSuccessStories);
     }
 }

@@ -42,6 +42,11 @@
         <x-why-choose-us-section :features="$whyChooseUs" />
     @endif
 
+    <!-- Visa Success Stories Section -->
+    @if(isset($visaSuccessStories))
+        <x-visa-success-stories-section :stories="$visaSuccessStories" />
+    @endif
+
     <!-- German Language Levels Section -->
     @if(isset($germanLanguageLevels))
         <x-german-language-levels-section :levels="$germanLanguageLevels" />

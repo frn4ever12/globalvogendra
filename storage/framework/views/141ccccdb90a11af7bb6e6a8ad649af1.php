@@ -138,6 +138,30 @@
 <?php endif; ?>
     <?php endif; ?>
 
+    <!-- German Language Levels Section -->
+    <?php if(isset($germanLanguageLevels)): ?>
+        <?php if (isset($component)) { $__componentOriginal4a1ba3406e6d66f52b6e4f40616462b3 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal4a1ba3406e6d66f52b6e4f40616462b3 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.german-language-levels-section','data' => ['levels' => $germanLanguageLevels]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('german-language-levels-section'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['levels' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($germanLanguageLevels)]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal4a1ba3406e6d66f52b6e4f40616462b3)): ?>
+<?php $attributes = $__attributesOriginal4a1ba3406e6d66f52b6e4f40616462b3; ?>
+<?php unset($__attributesOriginal4a1ba3406e6d66f52b6e4f40616462b3); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal4a1ba3406e6d66f52b6e4f40616462b3)): ?>
+<?php $component = $__componentOriginal4a1ba3406e6d66f52b6e4f40616462b3; ?>
+<?php unset($__componentOriginal4a1ba3406e6d66f52b6e4f40616462b3); ?>
+<?php endif; ?>
+    <?php endif; ?>
+
     <?php echo $__env->make('Frontend.includes.university-slider', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <div class="m-0 my-4 row align-items-center">
         <?php echo $__env->make('Frontend.includes.stories-slider', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

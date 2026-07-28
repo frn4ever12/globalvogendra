@@ -22,6 +22,7 @@ use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\UniversityController;
 use App\Http\Controllers\Admin\WhyChooseUsController;
 use App\Http\Controllers\Admin\GermanLanguageLevelController;
+use App\Http\Controllers\Admin\VisaSuccessStoryController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth'])->group(function () {
@@ -49,6 +50,7 @@ Route::resource('page',PageController::class);
 Route::resource('process',ProcessController::class);
 Route::resource('why-choose-us',WhyChooseUsController::class);
 Route::resource('german-language-level',GermanLanguageLevelController::class);
+Route::resource('visa-success-story',VisaSuccessStoryController::class);
 
 // AJAX routes for Gallery
 Route::post('gallery', [GalleryController::class, 'store'])->name('gallery.store');
@@ -86,5 +88,9 @@ Route::post('why-choose-us/{whyChooseUs}/toggle-status', [WhyChooseUsController:
 // AJAX routes for GermanLanguageLevels
 Route::post('german-language-level/reorder', [GermanLanguageLevelController::class, 'reorder'])->name('german-language-level.reorder');
 Route::post('german-language-level/{germanLanguageLevel}/toggle-status', [GermanLanguageLevelController::class, 'toggleStatus'])->name('german-language-level.toggle-status');
+
+// AJAX routes for VisaSuccessStories
+Route::post('visa-success-story/reorder', [VisaSuccessStoryController::class, 'reorder'])->name('visa-success-story.reorder');
+Route::post('visa-success-story/{visaSuccessStory}/toggle-status', [VisaSuccessStoryController::class, 'toggleStatus'])->name('visa-success-story.toggle-status');
 
 });

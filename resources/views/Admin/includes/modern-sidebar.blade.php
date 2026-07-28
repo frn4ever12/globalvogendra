@@ -123,6 +123,13 @@
             </li>
             
             <li class="sidebar-menu-item">
+                <a href="{{ route('admin.visa-success-story.index') }}" class="sidebar-menu-link {{ request()->is('admin/visa-success-story*') ? 'active' : '' }}">
+                    <i class="fas fa-passport"></i>
+                    <span>Visa Stories</span>
+                </a>
+            </li>
+            
+            <li class="sidebar-menu-item">
                 <a href="{{ route('admin.event.index') }}" class="sidebar-menu-link {{ request()->is('admin/event*') ? 'active' : '' }}">
                     <i class="fas fa-calendar-alt"></i>
                     <span>Events</span>
