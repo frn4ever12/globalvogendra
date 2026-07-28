@@ -1,12 +1,12 @@
-<script src="<?php echo e(asset('plugins/jquery/dist/jquery.min.js')); ?>?v=<?php echo e(time()); ?>"></script>
-<!-- Bootstrap -->
-<script src="<?php echo e(asset('plugins/bootstrap/dist/js/bootstrap.min.js')); ?>?v=<?php echo e(time()); ?>"></script>
-<!-- FastClick -->
-<script src="<?php echo e(asset('plugins/fastclick/lib/fastclick.js')); ?>?v=<?php echo e(time()); ?>"></script>
-<!-- NProgress -->
-<script src="<?php echo e(asset('plugins/nprogress/nprogress.js')); ?>?v=<?php echo e(time()); ?>"></script>
-<!-- jQuery custom content scroller -->
-<script src="<?php echo e(asset('plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')); ?>?v=<?php echo e(time()); ?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- Bootstrap CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+<!-- FastClick CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+<!-- NProgress CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+<!-- jQuery custom content scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
 <!-- Custom Theme Scripts -->
 <script src="<?php echo e(asset('dist/js/custom.min.js')); ?>?v=<?php echo e(time()); ?>"></script>

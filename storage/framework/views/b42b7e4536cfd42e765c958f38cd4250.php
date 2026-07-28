@@ -6,26 +6,28 @@
 
 <title><?php echo e($setting->name??'Example'); ?></title>
 
-<!-- Bootstrap -->
-<link href="<?php echo e(asset('plugins/bootstrap/dist/css/bootstrap.min.css')); ?>?v=<?php echo e(time()); ?>" rel="stylesheet">
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Font Awesome -->
-<link href="<?php echo e(asset('plugins/font-awesome/css/font-awesome.min.css')); ?>?v=<?php echo e(time()); ?>" rel="stylesheet">
-<!-- NProgress -->
-<link href="<?php echo e(asset('plugins/nprogress/nprogress.css')); ?>?v=<?php echo e(time()); ?>" rel="stylesheet">
-<!-- iCheck -->
-<link href="<?php echo e(asset('plugins/iCheck/skins/flat/green.css')); ?>?v=<?php echo e(time()); ?>" rel="stylesheet">
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- NProgress CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+<!-- iCheck CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/flat/green.css" rel="stylesheet">
 
-<!-- bootstrap-progressbar -->
-<link href="<?php echo e(asset('plugins/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')); ?>?v=<?php echo e(time()); ?>" rel="stylesheet">
-<!-- JQVMap -->
-<link href="<?php echo e(asset('plugins/jqvmap/dist/jqvmap.min.css')); ?>?v=<?php echo e(time()); ?>" rel="stylesheet" />
-<!-- bootstrap-daterangepicker -->
-<link href="<?php echo e(asset('plugins/bootstrap-daterangepicker/daterangepicker.css')); ?>?v=<?php echo e(time()); ?>" rel="stylesheet">
-<link href="<?php echo e(asset('plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css')); ?>?v=<?php echo e(time()); ?>" rel="stylesheet"/>
+<!-- bootstrap-progressbar CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/3.3.4/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+<!-- JQVMap CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jqvmap.min.css" rel="stylesheet" />
+<!-- bootstrap-daterangepicker CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.1.0/daterangepicker.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
 
-<!-- Custom Theme Style -->
-<link href="<?php echo e(asset('dist/css/custom.min.css')); ?>?v=<?php echo e(time()); ?>" rel="stylesheet">
+<!-- Custom Theme Style - inline for now -->
+<style>
+    /* Custom admin styles will be loaded inline to avoid CORS issues */
+</style>
 
 <link rel="stylesheet" href="<?php echo e(asset('dist/css/nepali.datepicker.min.css')); ?>?v=<?php echo e(time()); ?>">
 <link rel="stylesheet" href="<?php echo e(asset('dist/css/admin.css')); ?>?v=<?php echo e(time()); ?>">

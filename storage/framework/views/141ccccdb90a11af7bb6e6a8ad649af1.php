@@ -52,6 +52,30 @@
 <?php endif; ?>
     <?php endif; ?>
 
+    <!-- Services Section -->
+    <?php if(isset($services)): ?>
+        <?php if (isset($component)) { $__componentOriginal84e6a61baf7e197282792366cc9042f8 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal84e6a61baf7e197282792366cc9042f8 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.services-section','data' => ['services' => $services]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('services-section'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['services' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($services)]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal84e6a61baf7e197282792366cc9042f8)): ?>
+<?php $attributes = $__attributesOriginal84e6a61baf7e197282792366cc9042f8; ?>
+<?php unset($__attributesOriginal84e6a61baf7e197282792366cc9042f8); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal84e6a61baf7e197282792366cc9042f8)): ?>
+<?php $component = $__componentOriginal84e6a61baf7e197282792366cc9042f8; ?>
+<?php unset($__componentOriginal84e6a61baf7e197282792366cc9042f8); ?>
+<?php endif; ?>
+    <?php endif; ?>
+
     <?php echo $__env->make('Frontend.includes.university-slider', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <div class="m-0 my-4 row align-items-center">
         <?php echo $__env->make('Frontend.includes.stories-slider', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

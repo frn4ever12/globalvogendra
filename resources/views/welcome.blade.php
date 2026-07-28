@@ -11,7 +11,17 @@
 
     <!-- About Us Section -->
     @if(isset($aboutUs))
-        <x-about-us-section :aboutUs="$aboutUs" />
+        @if($aboutUs && ($aboutUs->status === true || $aboutUs->status === '1' || $aboutUs->status === 1))
+            <x-about-us-section :aboutUs="$aboutUs" />
+        @else
+            <div class="alert alert-warning">
+                About Us data exists but status is inactive. Status: {{ $aboutUs->status }}
+            </div>
+        @endif
+    @else
+        <div class="alert alert-warning">
+            About Us data not found in database.
+        </div>
     @endif
 
     <!-- Services Section -->
