@@ -76,7 +76,7 @@ class ServiceController extends Controller
 
         Service::create($validated);
 
-        return redirect()->route('admin.services.index')->with('success', 'Service created successfully!');
+        return redirect()->route('admin.service.index')->with('success', 'Service created successfully!');
     }
 
     public function show(Service $service)
@@ -127,13 +127,13 @@ class ServiceController extends Controller
 
         $service->update($validated);
 
-        return redirect()->route('admin.services.index')->with('success', 'Service updated successfully!');
+        return redirect()->route('admin.service.index')->with('success', 'Service updated successfully!');
     }
 
     public function destroy(Service $service)
     {
         $service->delete();
-        return redirect()->route('admin.services.index')->with('success', 'Service deleted successfully!');
+        return redirect()->route('admin.service.index')->with('success', 'Service deleted successfully!');
     }
 
     public function duplicate(Service $service)
@@ -144,7 +144,7 @@ class ServiceController extends Controller
         $newService->display_order = Service::max('display_order') + 1;
         $newService->save();
 
-        return redirect()->route('admin.services.index')->with('success', 'Service duplicated successfully!');
+        return redirect()->route('admin.service.index')->with('success', 'Service duplicated successfully!');
     }
 
     public function reorder(Request $request)
