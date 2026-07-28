@@ -3,6 +3,7 @@ namespace App\View\Composers;
 
 use App\Models\AboutUs;
 use App\Models\HeroBanner;
+use App\Models\Process;
 use App\Models\Service;
 use App\Models\Menu;
 use Illuminate\View\View;
@@ -13,6 +14,7 @@ class MenuComposer
     private $heroBanners;
     private $aboutUs;
     private $siteServices;
+    private $processes;
     
     public function compose(View $view)
     {
@@ -55,10 +57,19 @@ class MenuComposer
                 $this->siteServices = collect();
             }
         }
+
+        if (!$this->processes) {
+            try {
+                $this->processes = Process::active()->ordered()->get();
+            } catch (\Exception $e) {
+                $this->processes = collect();
+            }
+        }
         
         return $view->with('menus', $this->menus)
                     ->with('heroBanners', $this->heroBanners)
                     ->with('aboutUs', $this->aboutUs)
-                    ->with('frontendServices', $this->siteServices);
+                    ->with('frontendServices', $this->siteServices)
+                    ->with('processes', $this->processes);
     }
 }

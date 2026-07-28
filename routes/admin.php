@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PageFaqController;
 use App\Http\Controllers\Admin\PageSectionController;
+use App\Http\Controllers\Admin\ProcessController;
 use App\Http\Controllers\Admin\ProgramController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SiteSettingController;
@@ -43,6 +44,7 @@ Route::resource('event',EventController::class);
 Route::resource('menu',MenuController::class);
 Route::resource('submenu',SubMenuController::class);
 Route::resource('page',PageController::class);
+Route::resource('process',ProcessController::class);
 
 // AJAX routes for Gallery
 Route::post('gallery', [GalleryController::class, 'store'])->name('gallery.store');
@@ -68,5 +70,9 @@ Route::post('hero-banner/reorder', [HeroBannerController::class, 'reorder'])->na
 Route::post('service/reorder', [ServiceController::class, 'reorder'])->name('service.reorder');
 Route::post('service/{service}/duplicate', [ServiceController::class, 'duplicate'])->name('service.duplicate');
 Route::post('service/{service}/toggle-status', [ServiceController::class, 'toggleStatus'])->name('service.toggle-status');
+
+// AJAX routes for Processes
+Route::post('process/reorder', [ProcessController::class, 'reorder'])->name('process.reorder');
+Route::post('process/{process}/toggle-status', [ProcessController::class, 'toggleStatus'])->name('process.toggle-status');
 
 });

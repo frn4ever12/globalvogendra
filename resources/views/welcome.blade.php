@@ -32,6 +32,11 @@
         <x-services-section :services="$frontendServices" />
     @endif
 
+    <!-- Process Section -->
+    @if(isset($processes))
+        <x-process-section :processes="$processes" />
+    @endif
+
     @include('Frontend.includes.university-slider')
     <div class="m-0 my-4 row align-items-center">
         @include('Frontend.includes.stories-slider')

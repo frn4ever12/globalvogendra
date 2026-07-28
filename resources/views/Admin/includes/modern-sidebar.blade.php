@@ -102,6 +102,13 @@
             </li>
             
             <li class="sidebar-menu-item">
+                <a href="{{ route('admin.process.index') }}" class="sidebar-menu-link {{ request()->is('admin/process*') ? 'active' : '' }}">
+                    <i class="fas fa-tasks"></i>
+                    <span>Process</span>
+                </a>
+            </li>
+            
+            <li class="sidebar-menu-item">
                 <a href="{{ route('admin.event.index') }}" class="sidebar-menu-link {{ request()->is('admin/event*') ? 'active' : '' }}">
                     <i class="fas fa-calendar-alt"></i>
                     <span>Events</span>
