@@ -9,7 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
 <!-- Custom Theme Scripts -->
-<script src="https://raw.githubusercontent.com/frn4ever12/globalvogendra/main/public/dist/js/custom.min.js?v={{time()}}"></script>
+<script src="{{ asset('dist/js/custom.min.js') }}?v={{time()}}"></script>
 <script>
     $(document).ready(function() {
         $('#logOutBtn').on('click', function(e) {
