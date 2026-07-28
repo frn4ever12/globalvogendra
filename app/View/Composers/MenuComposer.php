@@ -37,7 +37,7 @@ class MenuComposer
 
         if (!$this->aboutUs) {
             try {
-                $this->aboutUs = AboutUs::active()->first();
+                $this->aboutUs = AboutUs::first();
             } catch (\Exception $e) {
                 $this->aboutUs = null;
             }
