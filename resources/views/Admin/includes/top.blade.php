@@ -25,8 +25,8 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
 
 <!-- Custom Theme Style -->
-<link href="https://cdn.jsdelivr.net/gh/frn4ever12/globalvogendra@main/public/dist/css/custom.min.css?v={{time()}}" rel="stylesheet">
+<link href="https://raw.githubusercontent.com/frn4ever12/globalvogendra/main/public/dist/css/custom.min.css?v={{time()}}" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frn4ever12/globalvogendra@main/public/dist/css/nepali.datepicker.min.css?v={{time()}}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frn4ever12/globalvogendra@main/public/dist/css/admin.css?v={{time()}}">
+<link rel="stylesheet" href="https://raw.githubusercontent.com/frn4ever12/globalvogendra/main/public/dist/css/nepali.datepicker.min.css?v={{time()}}">
+<link rel="stylesheet" href="https://raw.githubusercontent.com/frn4ever12/globalvogendra/main/public/dist/css/admin.css?v={{time()}}">
 <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
