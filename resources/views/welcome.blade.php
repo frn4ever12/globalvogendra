@@ -28,8 +28,8 @@
     @endif
 
     <!-- Services Section -->
-    @if(isset($services))
-        <x-services-section :services="$services" />
+    @if(isset($frontendServices))
+        <x-services-section :services="$frontendServices" />
     @endif
 
     @include('Frontend.includes.university-slider')

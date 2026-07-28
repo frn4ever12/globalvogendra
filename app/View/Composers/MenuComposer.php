@@ -54,6 +54,6 @@ class MenuComposer
         return $view->with('menus', $this->menus)
                     ->with('heroBanners', $this->heroBanners)
                     ->with('aboutUs', $this->aboutUs)
-                    ->with('services', $this->siteServices);
+                    ->with('frontendServices', $this->siteServices);
     }
 }
