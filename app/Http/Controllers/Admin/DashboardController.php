@@ -15,7 +15,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $setting = \App\Models\Setting::first();
+        $setting = \App\Models\SiteSetting::first();
         
         $countriesCount = Country::count();
         $universitiesCount = University::count();

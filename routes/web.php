@@ -15,7 +15,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 
 // Redirect /dashboard to /admin/dashboard
 Route::get('/dashboard', function () {
-    $setting = \App\Models\Setting::first();
+    $setting = \App\Models\SiteSetting::first();
     return view('dashboard', compact('setting'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
