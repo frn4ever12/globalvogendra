@@ -20,45 +20,45 @@
                             
                             <!-- Featured Image -->
                             @if($service->featured_image)
-                                <div class="service-image-wrapper position-relative" style="height: 200px; overflow: hidden;">
+                                <div class="service-image-wrapper position-relative" style="height: 140px; overflow: hidden;">
                                     <img src="{{ asset('storage/' . $service->featured_image) }}" 
                                          class="w-100 h-100" 
                                          alt="{{ $service->title }}"
                                          style="object-fit: cover; transition: transform 0.3s ease;"
                                          loading="lazy">
                                     @if($service->featured)
-                                        <span class="position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill bg-warning text-dark fw-bold" style="font-size: 12px;">
+                                        <span class="position-absolute top-0 end-0 m-2 px-2 py-1 rounded-pill bg-warning text-dark fw-bold" style="font-size: 10px;">
                                             <i class="fa fa-star"></i> Featured
                                         </span>
                                     @endif
                                 </div>
                             @else
-                                <div class="service-image-wrapper position-relative bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <div class="service-image-wrapper position-relative bg-light d-flex align-items-center justify-content-center" style="height: 140px;">
                                     @if($service->icon)
-                                        <i class="{{ $service->icon }} fa-4x text-muted"></i>
+                                        <i class="{{ $service->icon }} fa-3x text-muted"></i>
                                     @else
-                                        <i class="fa fa-cogs fa-4x text-muted"></i>
+                                        <i class="fa fa-cogs fa-3x text-muted"></i>
                                     @endif
                                 </div>
                             @endif
 
                             <!-- Card Content -->
-                            <div class="p-4">
+                            <div class="p-3">
                                 @if($service->category)
-                                    <span class="badge bg-secondary mb-2">{{ $service->category }}</span>
+                                    <span class="badge bg-secondary mb-2" style="font-size: 0.75rem;">{{ $service->category }}</span>
                                 @endif
                                 
-                                <h5 class="fw-bold mb-3" style="color: #333; font-size: 1.25rem;">{{ $service->title }}</h5>
+                                <h5 class="fw-bold mb-2" style="color: #333; font-size: 1.1rem;">{{ $service->title }}</h5>
                                 
                                 @if($service->short_description)
-                                    <p class="text-muted mb-4" style="font-size: 0.95rem; line-height: 1.6;">
-                                        {{ Str::limit(strip_tags($service->short_description), 150) }}
+                                    <p class="text-muted mb-3" style="font-size: 0.85rem; line-height: 1.5;">
+                                        {{ Str::limit(strip_tags($service->short_description), 100) }}
                                     </p>
                                 @endif
 
                                 <a href="{{ route('service.detail', $service->slug) }}" 
-                                   class="btn btn-primary rounded-pill px-4 py-2 w-100"
-                                   style="background: linear-gradient(135deg, #0056b3, #003a80); border: none; transition: all 0.3s ease;">
+                                   class="btn btn-primary rounded-pill px-3 py-2 w-100"
+                                   style="background: linear-gradient(135deg, #0056b3, #003a80); border: none; transition: all 0.3s ease; font-size: 0.85rem;">
                                     {{ $service->button_text ?? 'Read More' }}
                                 </a>
                             </div>
@@ -102,6 +102,10 @@
             .services-section h6 {
                 font-size: 0.9rem !important;
             }
+            
+            .service-image-wrapper {
+                height: 120px !important;
+            }
         }
 
         @media (max-width: 768px) {
@@ -114,15 +118,15 @@
             }
             
             .service-image-wrapper {
-                height: 180px !important;
+                height: 110px !important;
             }
             
             .service-card h5 {
-                font-size: 1.1rem !important;
+                font-size: 1rem !important;
             }
             
             .service-card p {
-                font-size: 0.9rem !important;
+                font-size: 0.8rem !important;
             }
         }
 
@@ -136,20 +140,20 @@
             }
             
             .service-image-wrapper {
-                height: 150px !important;
+                height: 100px !important;
             }
             
             .service-card h5 {
-                font-size: 1rem !important;
+                font-size: 0.95rem !important;
             }
             
             .service-card p {
-                font-size: 0.85rem !important;
+                font-size: 0.75rem !important;
             }
             
             .service-card .btn {
-                font-size: 0.85rem !important;
-                padding: 8px 20px !important;
+                font-size: 0.75rem !important;
+                padding: 6px 15px !important;
             }
         }
     </style>
