@@ -13,6 +13,11 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     require __DIR__.'/admin.php';
 });
 
+// Redirect /dashboard to /admin/dashboard
+Route::get('/dashboard', function () {
+    return redirect()->route('dashboard');
+})->middleware(['auth', 'verified']);
+
 Route::get('/', [PageController::class, 'index'])->name('home');
 
 // Service routes (must be before dynamic routes)
