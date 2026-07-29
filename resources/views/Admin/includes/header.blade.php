@@ -38,7 +38,7 @@
                     <li><a href="{{route('admin.event.index')}}"><i class="fa fa-slideshare"></i> Events </a></li>
                     <li><a href="{{route('admin.appointment.index')}}"><i class="fa fa-bell"></i> Appointments </a></li>
                     <li><a href="{{route('admin.faqs.index')}}"><i class="fa fa-slideshare"></i> FAQS </a></li>
-                    <li><a href="{{route('profile.edit')}}"><i class="fa fa-user"></i> Profile </a></li>
+                    <li><a href="{{route('dashboard')}}"><i class="fa fa-user"></i> Profile </a></li>
                     <li><a><i class="fa fa-cog"></i> Settings<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="{{route('admin.team.index')}}"> Team </a></li>
@@ -86,7 +86,7 @@
                                 <i class="mr-2 fa fa-home"></i>&nbsp; Homepage
                             </a>
                         </li>
-                        <li> <a href="{{ route('profile.edit') }}" class="dropdown-item">
+                        <li> <a href="{{ route('dashboard') }}" class="dropdown-item">
                                 <i class="mr-2 fa fa-user"></i>&nbsp; My Profile
                             </a>
                         </li>
