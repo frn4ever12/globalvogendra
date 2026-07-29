@@ -62,30 +62,22 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Hamburger menu toggle
-    const hamburgerBtn = document.getElementById('hamburger-btn');
-    const sidebar = document.getElementById('sidebar');
-    const mainContent = document.querySelector('.main-content');
-    
-    hamburgerBtn.addEventListener('click', function() {
-        sidebar.classList.toggle('collapsed');
-        mainContent.classList.toggle('expanded');
-    });
-    
     // User dropdown toggle
     const userDropdownToggle = document.getElementById('user-dropdown-toggle');
     const userDropdownMenu = document.getElementById('user-dropdown-menu');
     
-    userDropdownToggle.addEventListener('click', function() {
-        userDropdownMenu.classList.toggle('show');
-    });
-    
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!userDropdownToggle.contains(event.target) && !userDropdownMenu.contains(event.target)) {
-            userDropdownMenu.classList.remove('show');
-        }
-    });
+    if (userDropdownToggle && userDropdownMenu) {
+        userDropdownToggle.addEventListener('click', function() {
+            userDropdownMenu.classList.toggle('show');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!userDropdownToggle.contains(event.target) && !userDropdownMenu.contains(event.target)) {
+                userDropdownMenu.classList.remove('show');
+            }
+        });
+    }
     
     // Update current date and time
     function updateDateTime() {
