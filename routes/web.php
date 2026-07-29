@@ -15,7 +15,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 
 // Redirect /dashboard to /admin/dashboard
 Route::get('/dashboard', function () {
-    return redirect()->route('dashboard');
+    $setting = \App\Models\Setting::first();
+    return view('dashboard', compact('setting'));
 })->middleware(['auth', 'verified']);
 
 Route::get('/', [PageController::class, 'index'])->name('home');

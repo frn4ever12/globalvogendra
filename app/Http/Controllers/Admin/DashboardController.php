@@ -15,6 +15,8 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        $setting = \App\Models\Setting::first();
+        
         $countriesCount = Country::count();
         $universitiesCount = University::count();
         $programsCount = Program::count();
@@ -27,6 +29,7 @@ class DashboardController extends Controller
         $appointments = Appointment::orderBy('date', 'asc')->take(5)->get();
         
         return view('Admin.dashboard-modern', compact(
+            'setting',
             'countriesCount',
             'universitiesCount',
             'programsCount',
