@@ -52,7 +52,7 @@
                         </a>
                     </li>
                     <li class="sidebar-submenu-item">
-                        <a href="{{ route('admin.sub-menu.index') }}" class="sidebar-submenu-link {{ request()->is('admin/sub-menu*') ? 'active' : '' }}">
+                        <a href="{{ route('admin.submenu.index') }}" class="sidebar-submenu-link {{ request()->is('admin/submenu*') ? 'active' : '' }}">
                             <i class="fas fa-list"></i>
                             <span>Sub Menus</span>
                         </a>
@@ -144,14 +144,14 @@
             </li>
             
             <li class="sidebar-menu-item">
-                <a href="{{ route('admin.faq.index') }}" class="sidebar-menu-link {{ request()->is('admin/faq*') ? 'active' : '' }}">
+                <a href="{{ route('admin.faqs.index') }}" class="sidebar-menu-link {{ request()->is('admin/faqs*') ? 'active' : '' }}">
                     <i class="fas fa-question-circle"></i>
                     <span>FAQs</span>
                 </a>
             </li>
             
             <li class="sidebar-menu-item">
-                <a href="{{ route('admin.setting.index') }}" class="sidebar-menu-link {{ request()->is('admin/setting*') ? 'active' : '' }}">
+                <a href="{{ route('admin.site.setting') }}" class="sidebar-menu-link {{ request()->is('admin/site/setting*') ? 'active' : '' }}">
                     <i class="fas fa-cog"></i>
                     <span>Settings</span>
                 </a>
