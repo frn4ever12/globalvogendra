@@ -19,7 +19,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('menu.page', $menu->slug) }}">{{ $menu->name }}</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('menu.page', $menu->id) }}">{{ $menu->name }}</a></li>
                 <li class="breadcrumb-item active" aria-current="page">{{ $subMenu->name }}</li>
             </ol>
         </nav>
@@ -38,7 +38,7 @@
                         <ul class="list-group list-group-flush">
                             @foreach($menu->subMenus as $relatedSubMenu)
                                 <li class="list-group-item">
-                                    <a href="{{ route('submenu.page', [$menu->slug, $relatedSubMenu->slug]) }}" 
+                                    <a href="{{ route('submenu.page', [$menu->id, $relatedSubMenu->id]) }}" 
                                        class="text-decoration-none {{ $relatedSubMenu->id == $subMenu->id ? 'fw-bold text-primary' : 'text-dark' }}">
                                         {{ $relatedSubMenu->name }}
                                     </a>

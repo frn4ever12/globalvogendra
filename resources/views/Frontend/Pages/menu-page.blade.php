@@ -40,7 +40,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ $subMenu->name }}</h5>
                                 <p class="card-text text-muted">Learn more about {{ $subMenu->name }}</p>
-                                <a href="{{ route('submenu.page', [$menu->slug, $subMenu->slug]) }}" class="btn btn-primary">View Details</a>
+                                <a href="{{ route('submenu.page', [$menu->id, $subMenu->id]) }}" class="btn btn-primary">View Details</a>
                             </div>
                         </div>
                     </div>
