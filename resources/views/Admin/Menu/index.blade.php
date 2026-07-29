@@ -16,6 +16,7 @@
                     <tr>
                         <th>S.N</th>
                         <th>Name</th>
+                        <th>Slug</th>
                         <th>Icon</th>
                         <th>Order</th>
                         <th>Status</th>
@@ -29,6 +30,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $menu->name }}</td>
+                            <td>{{ $menu->slug ?? '-' }}</td>
                             <td>{{ $menu->icon ?? '-' }}</td>
                             <td>{{ $menu->order_no }}</td>
                             <td><span class="badge {{ $menu->status ? 'bg-success' : 'bg-danger' }}">{{ $menu->status ? 'Active' : 'Inactive' }}</span></td>
