@@ -16,13 +16,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Custom Admin CSS -->
-    <link rel="stylesheet" href="{{ asset('dist/css/admin-modern.css') }}?v={{time()}}">
+    <link rel="stylesheet" href="{{ asset('dist/css/admin-modern.css') }}">
     
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     
     @yield('head')
 </head>
 <body>
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    
     @include('Admin.includes.modern-sidebar')
     
     <div class="main-content">
@@ -46,16 +49,25 @@
             const hamburgerBtn = document.getElementById('hamburger-btn');
             const sidebar = document.getElementById('sidebar');
             const mainContent = document.querySelector('.main-content');
+            const mobileOverlay = document.getElementById('mobile-overlay');
             
             if (hamburgerBtn && sidebar && mainContent) {
                 hamburgerBtn.addEventListener('click', function() {
-                    sidebar.classList.toggle('collapsed');
-                    mainContent.classList.toggle('expanded');
+                    if (window.innerWidth <= 1024) {
+                        // Mobile: show/hide sidebar with overlay
+                        sidebar.classList.toggle('show');
+                        if (mobileOverlay) {
+                            mobileOverlay.classList.toggle('show');
+                        }
+                    } else {
+                        // Desktop: collapse/expand sidebar
+                        sidebar.classList.toggle('collapsed');
+                        mainContent.classList.toggle('expanded');
+                    }
                 });
             }
             
-            // Mobile sidebar toggle
-            const mobileOverlay = document.querySelector('.mobile-overlay');
+            // Mobile overlay click to close sidebar
             if (mobileOverlay) {
                 mobileOverlay.addEventListener('click', function() {
                     sidebar.classList.remove('show');
