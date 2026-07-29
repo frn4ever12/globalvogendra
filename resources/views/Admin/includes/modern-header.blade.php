@@ -34,9 +34,9 @@
                 <i class="fas fa-chevron-down"></i>
             </button>
             <div class="user-dropdown-menu" id="user-dropdown-menu">
-                <a href="{{ route('profile.edit') }}" class="user-dropdown-item">
-                    <i class="fas fa-user"></i>
-                    <span>Profile</span>
+                <a href="{{ route('dashboard') }}" class="user-dropdown-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
                 </a>
                 <a href="{{ route('home') }}" class="user-dropdown-item">
                     <i class="fas fa-home"></i>
