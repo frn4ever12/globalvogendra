@@ -29,31 +29,18 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{ $menu->id }}">
                                     @foreach($menu->subMenus as $subMenu)
-                                        @if($menu->slug && $subMenu->slug)
-                                            <li><a class="dropdown-item" href="{{ route('submenu.page', [$menu->slug, $subMenu->slug]) }}">{{ $subMenu->name }}</a></li>
-                                        @else
-                                            <li><a class="dropdown-item" href="javascript:void(0)">{{ $subMenu->name }}</a></li>
-                                        @endif
+                                        <li><a class="dropdown-item" href="{{ route('submenu.page', [$menu->id, $subMenu->id]) }}">{{ $subMenu->name }}</a></li>
                                     @endforeach
                                 </ul>
                             </li>
                         @else
                             <li class="nav-item">
-                                @if($menu->slug)
-                                    <a class="mx-2 nav-link" href="{{ route('menu.page', $menu->slug) }}">
-                                        @if($menu->icon)
-                                            <i class="{{ $menu->icon }} me-1"></i>
-                                        @endif
-                                        {{ $menu->name }}
-                                    </a>
-                                @else
-                                    <a class="mx-2 nav-link" href="javascript:void(0)">
-                                        @if($menu->icon)
-                                            <i class="{{ $menu->icon }} me-1"></i>
-                                        @endif
-                                        {{ $menu->name }}
-                                    </a>
-                                @endif
+                                <a class="mx-2 nav-link" href="{{ route('menu.page', $menu->id) }}">
+                                    @if($menu->icon)
+                                        <i class="{{ $menu->icon }} me-1"></i>
+                                    @endif
+                                    {{ $menu->name }}
+                                </a>
                             </li>
                         @endif
                     @endforeach

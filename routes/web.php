@@ -28,9 +28,9 @@ Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('servic
 // German Language Level routes
 Route::get('/german-level/{slug}', [GermanLevelController::class, 'show'])->name('german-level.show');
 
-// Dynamic page routes with SEO-friendly URLs
-Route::get('/{menuSlug}', [PageController::class, 'menuPage'])->name('menu.page');
-Route::get('/{menuSlug}/{subMenuSlug}', [PageController::class, 'subMenuPage'])->name('submenu.page');
+// Dynamic page routes with IDs
+Route::get('/menu/{id}', [PageController::class, 'menuPage'])->name('menu.page');
+Route::get('/menu/{menuId}/{subMenuId}', [PageController::class, 'subMenuPage'])->name('submenu.page');
 Route::get('/about',[PageController::class,'about'])->name('about');
 Route::get('/contact',[PageController::class,'contact'])->name('contact');
 Route::get('/faqs',[PageController::class,'faqs'])->name('faqs');

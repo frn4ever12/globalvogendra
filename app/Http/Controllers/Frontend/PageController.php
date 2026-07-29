@@ -149,17 +149,17 @@ class PageController extends Controller
         return view('Frontend.Pages.menu-content', compact('menu'));
     }
 
-    public function menuPage($menuSlug)
+    public function menuPage($id)
     {
-        $menu = Menu::where('slug', $menuSlug)->where('status', true)->firstOrFail();
+        $menu = Menu::where('id', $id)->where('status', true)->firstOrFail();
         $subMenus = SubMenu::where('menu_id', $menu->id)->where('status', true)->orderBy('order_no')->get();
         return view('Frontend.Pages.menu-page', compact('menu', 'subMenus'));
     }
 
-    public function subMenuPage($menuSlug, $subMenuSlug)
+    public function subMenuPage($menuId, $subMenuId)
     {
-        $menu = Menu::where('slug', $menuSlug)->where('status', true)->firstOrFail();
-        $subMenu = SubMenu::where('slug', $subMenuSlug)->where('menu_id', $menu->id)->where('status', true)->firstOrFail();
+        $menu = Menu::where('id', $menuId)->where('status', true)->firstOrFail();
+        $subMenu = SubMenu::where('id', $subMenuId)->where('menu_id', $menu->id)->where('status', true)->firstOrFail();
         $page = Page::where('submenu_id', $subMenu->id)->with('sections')->firstOrFail();
 
         return view('Frontend.Pages.dynamic-page', compact('menu', 'subMenu', 'page'));

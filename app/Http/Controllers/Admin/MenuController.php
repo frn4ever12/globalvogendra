@@ -29,7 +29,6 @@ class MenuController extends Controller
             'status' => 'nullable'
         ]);
 
-        $validatedData['slug'] = Str::slug($validatedData['name']);
         $validatedData['order_no'] = $validatedData['order_no'] ?? 0;
         $validatedData['status'] = $request->has('status') ? true : false;
 
@@ -52,7 +51,6 @@ class MenuController extends Controller
             'status' => 'nullable'
         ]);
 
-        $validatedData['slug'] = Str::slug($validatedData['name']);
         $validatedData['order_no'] = $validatedData['order_no'] ?? 0;
         $validatedData['status'] = $request->has('status') ? true : false;
 
