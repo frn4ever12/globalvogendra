@@ -3,10 +3,6 @@
     <!-- Hero Slider Section -->
     @if(isset($heroBanners) && $heroBanners->count() > 0)
         <x-hero-slider :banners="$heroBanners" />
-    @else
-        <div class="alert alert-warning">
-            No hero banners found. {{ isset($heroBanners) ? 'Banners count: ' . $heroBanners->count() : 'heroBanners variable not set' }}
-        </div>
     @endif
 
     <!-- About Us Section -->
