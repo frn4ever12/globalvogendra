@@ -17,7 +17,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 Route::get('/dashboard', function () {
     $setting = \App\Models\Setting::first();
     return view('dashboard', compact('setting'));
-})->middleware(['auth', 'verified']);
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/', [PageController::class, 'index'])->name('home');
 
